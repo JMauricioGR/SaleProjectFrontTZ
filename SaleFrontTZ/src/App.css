@@ -2,3 +2,66 @@
 --robin-egg-blue: #00c2d1ff;
 --aureolin: #f9e900ff;
 --white-smoke: #f6f4f4ff; */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family:  Helvetica, sans-serif, Arial;
+  background-color: #f6f4f4ff;
+  height: 100vh;
+  font-size: 16px;
+}
+
+#root{ 
+  height: 100vh;  
+}
+
+.App {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.main-container{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.side-menu{
+  display: flex;
+  background-color: #0a1045ff;
+  padding: 5px;
+  align-items: center;
+  border-right: 2px solid #363e88;
+}
+
+.side-menu .menu-item{
+  color: #E7E4E0;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+  margin:  1rem 0rem;
+  border-bottom: 0.01rem solid #E7E4E0;
+}
+
+.side-menu .menu-item:hover{
+  color: #f9e900ff;
+  border-bottom: 0.1rem solid #f9e900ff;
+}
+
+.content-container{
+  margin: 0.8rem 1rem;
+  width: 80vh;
+}
+
+ul{
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
