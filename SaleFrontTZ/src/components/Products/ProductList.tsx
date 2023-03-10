@@ -11,20 +11,15 @@ const ProductList = () => {
 
     const dispatch = useDispatch()
 
-    const [ productsResult, setProductsResult] = useState<[productType]>()
 
-    useEffect(() => {
-      
+    useEffect(() => {      
         getAllProductsService().then(            
             (products) => {
                 dispatch(getAllProducts(products))
-                setProductsResult(products)
-            }
-            
-        )
-      
-    }, [])
-    
+                console.table(productStore)
+            }            
+        )      
+    }, [])    
 
   return (
     <div>
@@ -39,9 +34,10 @@ const ProductList = () => {
                 </tr>
             </thead>
             <tbody>
-                {productsResult?(productsResult.map(
-                    (provider: productType, index: any) => <tr key={index}><ListItem product={provider} /></tr>
-                )):<tr><td>No data</td></tr>}
+                {productStore.map((productItem: productType, index) =>
+                    <ListItem product={productItem} index={index} />
+                    )
+                }
             </tbody>
         </table>
     </div>

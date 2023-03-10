@@ -2,20 +2,20 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface productType {
     id?: string,
-    productName: string,
-    minimumUnits: number|string,
-    maximumUnits: number|string,
-    stock: number|string,
+    name: string,
+    min: number|string,
+    max: number|string,
+    inventory: number|string,
     newStock?: number|string,
     quantity?: number,
 }
 
 const initialState: productType[] =[ {
     id: "62a45862bc103278050ae1b9",
-    productName: "martillo",
-    minimumUnits: 4,
-    maximumUnits: 20,
-    stock: 8
+    name: "martillo",
+    min: 4,
+    max: 20,
+    inventory: 8
 }]
 
 const productSlice = createSlice({

@@ -1,14 +1,13 @@
 import { productType } from '../../state/slice/productSlice'
 
-const ListItem = (props:{product: productType}) => {
+const ListItem = (props:{product: productType, index: any}) => {
   return (
-    <>
-        <td>{props.product.productName}</td>
-        <td>{props.product.stock}</td>
+    <tr>
+        <td>{props.product.name}</td>
+        <td>{props.product.inventory}</td>
         <td><button>+</button></td>
         <td><button>X</button></td>
-        {console.table(props.product.id)}
-    </>
+    </tr>
   )
 }
 
